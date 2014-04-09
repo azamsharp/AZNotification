@@ -76,7 +76,6 @@ NSString *const MESSAGE_COLOR = @"7F7978";
 
 -(void) setup
 {
-    _collisionCount = 0;
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.frame = CGRectMake(0, (-1) * NOTIFICATION_VIEW_HEIGHT, screenBounds.size.width, NOTIFICATION_VIEW_HEIGHT);
