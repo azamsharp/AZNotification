@@ -85,7 +85,7 @@ NSString *const MESSAGE_COLOR = @"7F7978";
     // create the labels
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, screenBounds.size.width, NOTIFICATION_VIEW_HEIGHT)];
     titleLabel.text = _title;
-    titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Ligth" size:17];
+    titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
     titleLabel.textColor = [UIColor whiteColor];
     
     [self addSubview:titleLabel];
