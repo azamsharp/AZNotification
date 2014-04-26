@@ -21,9 +21,4 @@
     [notificationView applyDynamics];
 }
 
-+(void) showNotificationWithTitle:(NSString *)title controller:(UIViewController *)controller
-{
-    [self showNotificationWithTitle:title controller:controller notificationType:AZNotificationTypeMessage];
-}
-
 @end
