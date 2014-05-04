@@ -18,7 +18,10 @@ You can watch the video using the link below:
 
 <h2>Installation</h2>
 
-Copy the contents of the "src" folder in your application. The AZNotification control <b>will</b> be available as a Cocoapod soon. 
+- Copy the contents of the "src" folder in your application. 
+- `#import "AZNotification.h"`
+
+The AZNotification control <b>will</b> be available as a Cocoapod soon. 
 
 <h2>Usage</h2>
 
