@@ -15,12 +15,27 @@ NSString *const MESSAGE_COLOR = @"7F7978";
 
 @implementation AZNotificationView
 
+static const int NOTIFICATION_VIEW_HEIGHT = 64;
+
 -(instancetype) initWithTitle:(NSString *)title referenceView:(UIView *)referenceView notificationType:(AZNotificationType)notificationType
 {
     self = [super init];
     _title = title;
     _referenceView = referenceView;
     _notificationType = notificationType;
+    _showNotificationUnderNavigationBar = NO;
+    
+    [self setup];
+    return self;
+}
+
+-(instancetype) initWithTitle:(NSString *)title referenceView:(UIView *)referenceView notificationType:(AZNotificationType)notificationType showNotificationUnderNavigationBar:(BOOL)showNotificationUnderNavigationBar
+{
+    self = [super init];
+    _title = title;
+    _referenceView = referenceView;
+    _notificationType = notificationType;
+    _showNotificationUnderNavigationBar = showNotificationUnderNavigationBar;
     
     [self setup];
     return self;
@@ -28,6 +43,8 @@ NSString *const MESSAGE_COLOR = @"7F7978";
 
 -(void) applyDynamics
 {
+    int boundaryYAxis = _showNotificationUnderNavigationBar == YES ? 2 : 1;
+    
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:_referenceView];
     _gravity = [[UIGravityBehavior alloc] initWithItems:@[self]];
     _collision = [[UICollisionBehavior alloc] initWithItems:@[self]];
@@ -35,7 +52,7 @@ NSString *const MESSAGE_COLOR = @"7F7978";
     
     _itemBehavior.elasticity = 0.5f;
     
-    [_collision addBoundaryWithIdentifier:@"AZNotificationBoundary" fromPoint:CGPointMake(0, self.bounds.size.height) toPoint:CGPointMake(_referenceView.bounds.size.width, self.bounds.size.height)];
+    [_collision addBoundaryWithIdentifier:@"AZNotificationBoundary" fromPoint:CGPointMake(0, self.bounds.size.height * boundaryYAxis) toPoint:CGPointMake(_referenceView.bounds.size.width, self.bounds.size.height * boundaryYAxis)];
     
     [_animator addBehavior:_gravity];
     [_animator addBehavior:_collision];
@@ -76,17 +93,15 @@ NSString *const MESSAGE_COLOR = @"7F7978";
 
 -(void) setup
 {
-    _collisionCount = 0;
-    
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    self.frame = CGRectMake(0, (-1) * NOTIFICATION_VIEW_HEIGHT, screenBounds.size.width, NOTIFICATION_VIEW_HEIGHT);
+    self.frame = CGRectMake(0, _showNotificationUnderNavigationBar == YES ? 1 : -1 * NOTIFICATION_VIEW_HEIGHT, screenBounds.size.width, NOTIFICATION_VIEW_HEIGHT);
     
     [self setupNotificationType];
     
     // create the labels
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, screenBounds.size.width, NOTIFICATION_VIEW_HEIGHT)];
     titleLabel.text = _title;
-    titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Ligth" size:17];
+    titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
     titleLabel.textColor = [UIColor whiteColor];
     
     [self addSubview:titleLabel];

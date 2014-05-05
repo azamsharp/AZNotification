@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UIColor+Additions.h"
 
-#define NOTIFICATION_VIEW_HEIGHT 64
+
 
 extern NSString *const SUCCESS_COLOR;
 extern NSString *const ERROR_COLOR;
@@ -30,6 +30,7 @@ typedef NS_ENUM(NSInteger, AZNotificationType) {
     NSString *_title;
     UIView *_referenceView;
     AZNotificationType _notificationType;
+    BOOL _showNotificationUnderNavigationBar; 
     
     UIDynamicAnimator *_animator;
     UIGravityBehavior *_gravity;
@@ -44,5 +45,8 @@ typedef NS_ENUM(NSInteger, AZNotificationType) {
 -(void) applyDynamics;
 
 -(instancetype) initWithTitle:(NSString *) title referenceView:(UIView *) referenceView notificationType:(AZNotificationType) notificationType;
+
+-(instancetype) initWithTitle:(NSString *) title referenceView:(UIView *) referenceView notificationType:(AZNotificationType) notificationType showNotificationUnderNavigationBar:(BOOL) showNotificationUnderNavigationBar;
+
 
 @end

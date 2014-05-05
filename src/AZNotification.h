@@ -14,7 +14,9 @@
     
 }
 
-+(void) showNotificationWithTitle:(NSString *) title controller:(UIViewController *) controller;
 +(void) showNotificationWithTitle:(NSString *)title controller:(UIViewController *)controller notificationType:(AZNotificationType) notificationType;
+
+
++(void) showNotificationWithTitle:(NSString *)title controller:(UIViewController *)controller notificationType:(AZNotificationType) notificationType shouldShowNotificationUnderNavigationBar:(BOOL) shouldShowNotificationUnderNavigationBar;
 
 @end
