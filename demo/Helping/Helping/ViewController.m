@@ -27,11 +27,11 @@
     
     if(tag == 0)
     {
-    [AZNotification showNotificationWithTitle:@"Success! Now let's play!" controller:self notificationType:AZNotificationTypeSuccess];
+    [AZNotification showNotificationWithTitle:@"Success! Now let's play!" controller:self notificationType:AZNotificationTypeSuccess shouldShowNotificationUnderNavigationBar:YES];
     }
     else if(tag == 1)
     {
-        [AZNotification showNotificationWithTitle:@"Error: WTF happened!" controller:self notificationType:AZNotificationTypeError];
+        [AZNotification showNotificationWithTitle:@"Error: WTF happened!" controller:self notificationType:AZNotificationTypeError shouldShowNotificationUnderNavigationBar:YES];
     }
     else if(tag == 2)
     {
