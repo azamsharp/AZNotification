@@ -23,7 +23,8 @@ Copy the contents of the "src" folder in your application. The AZNotification co
 <h2>Usage</h2>
 
 ```
-    [AZNotification showNotificationWithTitle:@"Success! Now let's play!" controller:self notificationType:AZNotificationTypeSuccess];
+// This shows the notification under the navigation bar
+    [AZNotification showNotificationWithTitle:@"Success! Now let's play!" controller:self notificationType:AZNotificationTypeSuccess shouldShowNotificationUnderNavigationBar:YES];
  
     [AZNotification showNotificationWithTitle:@"Error: WTF happened!" controller:self notificationType:AZNotificationTypeError];
   
