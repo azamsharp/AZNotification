@@ -13,7 +13,7 @@ AZNotification is a custom control which allows the user to provide user interfa
 <p>
 You can watch the video using the link below:
 
-<a href="https://www.youtube.com/watch?v=OSMQ_N3ydSs">AZNotification Video on YouTube</a>
+<a href="https://www.youtube.com/watch?v=6hgL-ZWTYg8&feature=youtu.be">AZNotification Video on YouTube</a>
 </p>
 
 <h2>Installation</h2>
