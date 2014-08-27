@@ -99,10 +99,13 @@ static const int NOTIFICATION_VIEW_HEIGHT = 64;
     [self setupNotificationType];
     
     // create the labels
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, screenBounds.size.width, NOTIFICATION_VIEW_HEIGHT)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, screenBounds.size.width-20, NOTIFICATION_VIEW_HEIGHT)];
     titleLabel.text = _title;
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
     titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.numberOfLines = 1;
+    titleLabel.minimumScaleFactor = 0.75;
+    titleLabel.adjustsFontSizeToFitWidth = YES;
     
     [self addSubview:titleLabel];
 }
