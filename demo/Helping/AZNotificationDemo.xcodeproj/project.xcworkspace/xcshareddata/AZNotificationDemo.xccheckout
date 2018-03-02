@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5DF404AD-3D06-4BC8-8FCD-DBE2BDADCFDF</string>
+	<string>60301CB0-40BE-42F9-9545-210995AE5C39</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AZNotificationDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>49C5CB7E-E91D-4C06-B74A-F2BB89EF4505</key>
-		<string>https://github.com/azamsharp/AZNotification.git</string>
+		<key>A8C9050C-1A85-4E65-A516-A8084D8D2C7C</key>
+		<string>https://github.com/dkhamsing/AZNotification.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>demo/Helping/AZNotificationDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>49C5CB7E-E91D-4C06-B74A-F2BB89EF4505</key>
+		<key>A8C9050C-1A85-4E65-A516-A8084D8D2C7C</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/azamsharp/AZNotification.git</string>
+	<string>https://github.com/dkhamsing/AZNotification.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>49C5CB7E-E91D-4C06-B74A-F2BB89EF4505</string>
+	<string>A8C9050C-1A85-4E65-A516-A8084D8D2C7C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>49C5CB7E-E91D-4C06-B74A-F2BB89EF4505</string>
+			<string>A8C9050C-1A85-4E65-A516-A8084D8D2C7C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AZNotification</string>
 		</dict>
