@@ -35,7 +35,7 @@
     }
     else if(tag == 2)
     {
-        [AZNotification showNotificationWithTitle:@"Oh BTW! Your hair is on fire!" controller:self notificationType:AZNotificationTypeWarning];
+        [AZNotification showNotificationWithTitle:@"Oh BTW! Your hair is on fire! This is a really really really long message!" controller:self notificationType:AZNotificationTypeWarning];
     }
     else
     {
