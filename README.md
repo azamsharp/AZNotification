@@ -37,4 +37,3 @@ The AZNotification control <b>will</b> be available as a Cocoapod soon.
 
 ```
 
-Swift 4
