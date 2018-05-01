@@ -36,3 +36,5 @@ The AZNotification control <b>will</b> be available as a Cocoapod soon.
     [AZNotification showNotificationWithTitle:@"There are no new messages!" controller:self notificationType:AZNotificationTypeMessage];
 
 ```
+
+Swift 4
